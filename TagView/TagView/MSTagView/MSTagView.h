@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^getHeightBlock)(CGFloat height);
+typedef void(^didSelectTagBlock)(NSInteger index);
 
 @interface MSTagView : UIView
 
-@property (nonatomic, copy) getHeightBlock getHeightBlock;
+@property (nonatomic, copy) didSelectTagBlock didSelectTagBlock;
+@property (nonatomic, strong) NSArray *tagArray;;
 
-// 设置标签数组并返回整个标签View的高度
-- (void)setTagArray:(NSArray *)array tagViewHeight:(getHeightBlock)block;
+- (void)selectTagAtIndex:(didSelectTagBlock)block;
 
 @end

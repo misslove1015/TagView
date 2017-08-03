@@ -28,10 +28,8 @@
             </view>
             <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="jJk-dV-zvK" secondAttribute="trailing" constant="12" id="0Ys-c6-imv"/>
-                <constraint firstItem="jJk-dV-zvK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="Urx-YM-3Tt"/>
-                <constraint firstItem="jJk-dV-zvK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="b2F-AI-zeN"/>
-                <constraint firstAttribute="bottom" secondItem="jJk-dV-zvK" secondAttribute="bottom" constant="8" id="yxN-gr-RWy"/>
+                <constraint firstItem="jJk-dV-zvK" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="67F-GB-1PG"/>
+                <constraint firstItem="jJk-dV-zvK" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="w4e-d6-YC4"/>
             </constraints>
             <size key="customSize" width="83" height="33"/>
             <userDefinedRuntimeAttributes>

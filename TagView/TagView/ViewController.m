@@ -23,7 +23,10 @@
     
     self.tagView = [[MSTagView alloc]initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 200)];
     NSArray *array = @[@"台风",@"杭州",@"气象",@"大气科学",@"中国",@"天气",@"夏天",@"千岛湖",@"今日头条"];
-    [self.tagView setTagArray:array tagViewHeight:nil];
+    self.tagView.tagArray = array;
+    [self.tagView selectTagAtIndex:^(NSInteger index) {
+        NSLog(@"%ld",index);
+    }];
     [self.view addSubview:self.tagView];
     
 }

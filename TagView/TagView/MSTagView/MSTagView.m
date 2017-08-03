@@ -40,10 +40,13 @@
     [self addSubview:self.collectionView];
 }
 
-- (void)setTagArray:(NSArray *)array tagViewHeight:(getHeightBlock)block {
-    self.getHeightBlock = block;
-    self.array = array;
+- (void)setTagArray:(NSArray *)tagArray {
+    self.array = tagArray;
     [self.collectionView reloadData];
+}
+
+- (void)selectTagAtIndex:(didSelectTagBlock)block {
+    self.didSelectTagBlock = block;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -61,9 +64,10 @@
     return CGSizeMake(size.width+24, size.height+16);
 }
 
-- (void)layoutSubviews {
-    if (self.getHeightBlock) {
-        self.getHeightBlock(self.collectionView.contentSize.height);
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    if (self.didSelectTagBlock) {
+        self.didSelectTagBlock(indexPath.item);
     }
 }
 
